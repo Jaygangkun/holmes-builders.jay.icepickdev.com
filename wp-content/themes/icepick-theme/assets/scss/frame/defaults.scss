@@ -1,0 +1,27 @@
+body{
+	font-family: $font-family-monospace;
+}
+
+.has-font-sans{
+	font-family: $font-family-sans-serif;
+}
+
+.has-font-mono{
+	font-family: $font-family-monospace;
+}
+
+.btn-secondary{
+	
+	background-color:$primary;
+	border:1px solid #F3E9C7;
+	color: $white;
+	
+	&:hover{
+		
+		background-color:$white;
+		color: $primary;
+		border:1px solid $white;
+		
+	}
+	
+}

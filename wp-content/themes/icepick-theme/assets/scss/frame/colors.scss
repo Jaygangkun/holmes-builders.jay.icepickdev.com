@@ -1,0 +1,22 @@
+$themecolors: (
+	"black": #000, 
+	"white": #fff, 
+	"green-light": #214021,
+	"green-darker": #3D443B,  
+);
+
+//make sure to add , (comma) after the list item of the map as well
+
+//
+// you can reuse the theme colors the frame or anywhere in Bootstrap:
+// map.get($themecolors, "green-light")
+//
+
+@each $name, $color in $themecolors {
+  	.has-#{$name}-color {
+		color: $color;
+    }
+  	.has-#{$name}-background-color {
+		background-color: $color;
+	}
+}

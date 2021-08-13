@@ -1,0 +1,40 @@
+{
+	"name": "icepick-theme",
+	"version": "1.0.0",
+	"description": "IcePick theme compilers",
+	"main": "index.js",
+	"scripts": {
+		"dev": "gulp"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.12.10",
+		"@babel/preset-env": "^7.12.11",
+		"@babel/preset-react": "^7.13.13",
+		"babel-preset-env": "^1.7.0",
+		"gulp": "^4.0.2",
+		"gulp-babel": "^8.0.0",
+		"gulp-babel-minify": "^0.5.1",
+		"gulp-eslint": "^6.0.0",
+		"gulp-rename": "^2.0.0",
+		"gulp-sass": "^4.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-append-prepend": "^1.0.9"
+	},
+	"dependencies": {
+		"@jsdevtools/sourcemapify": "^2.0.2",
+		"@popperjs/core": "^2.9.2",
+		"aos": "^3.0.0-beta.6",
+		"babelify": "^10.0.0",
+		"bootstrap": "^5.0.2",
+		"browserify": "^17.0.0",
+		"classnames": "^2.3.1",
+		"glob": "^7.1.7",
+		"jquery": "^3.6.0",
+		"lodash": "^4.17.21",
+		"lodash.assign": "^4.2.0",
+		"vinyl-buffer": "^1.0.1",
+		"vinyl-source-stream": "^2.0.0"
+	}
+}
