@@ -95,6 +95,56 @@ function my_acf_init() {
 			'icon'				=> 'slides',
 			'keywords'			=> array( 'test' )
 		));
+
+		acf_register_block(array(
+			'name'				=> 'general-hero',
+			'title'				=> __('General Hero Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
+
+		acf_register_block(array(
+			'name'				=> 'navigations',
+			'title'				=> __('Navigations Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
+
+		acf_register_block(array(
+			'name'				=> 'photo-text',
+			'title'				=> __('Photo Text Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
+
+		acf_register_block(array(
+			'name'				=> 'teams',
+			'title'				=> __('Teams Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
+
+		acf_register_block(array(
+			'name'				=> 'testimonials',
+			'title'				=> __('Testimonials Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
 	}
 }
   

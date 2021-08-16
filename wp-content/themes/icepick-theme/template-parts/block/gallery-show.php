@@ -1,57 +1,4 @@
 <?php /* Block Name: Gallery Show Block */ ?>
-<style>
-    .gallery-show {
-        padding: 50px 0px;
-    }
-
-	.gallery-show-images {
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-    }
-
-    .gallery-show-image1 {
-        width: calc(35% - 20px);
-        height: 0px;
-        padding-top: 46%;
-        position: relative;
-    }
-
-    .gallery-show-image1-wrap {
-        position: absolute;
-        left: 0px;
-        width: 100%;
-        top: 0px;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .gallery-show-image2 {
-        width: calc(65% - 20px);
-        position: relative;
-    }
-
-    .gallery-show-image2-wrap {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .gallery-show .section-title-30 {
-        text-align: right;
-    }
-
-    .gallery-show-images {
-        margin-top: 20px;
-    }
-</style>
 <section class="gallery-show">
 	<div class="container">
         <div class="row d-flex align-items-center justify-content-between">
@@ -96,10 +43,3 @@
     </div>
     
 </section>
-<script>
-	(function($){
-		$(document).ready(function() {
-			
-		})
-	})(jQuery)
-</script>
