@@ -180,6 +180,10 @@ function icepick_scripts_and_styles() {
     // register main stylesheet
     wp_register_style( 'icepick-stylesheet', get_stylesheet_directory_uri() . '/dist/bundle.style.css', array(), '', 'all' );
 
+	// slick stylesheet
+    wp_register_style( 'slick-stylesheet', get_stylesheet_directory_uri() . '/assets/scss/lib/slick.css', array(), '', 'all' );
+	wp_register_style( 'slick-theme-stylesheet', get_stylesheet_directory_uri() . '/assets/scss/lib/slick-theme.css', array(), '', 'all' );
+
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
       wp_enqueue_script( 'comment-reply' );
@@ -188,8 +192,15 @@ function icepick_scripts_and_styles() {
     //adding scripts file in the footer
     wp_register_script( 'icepick-js', get_stylesheet_directory_uri() . '/dist/bundle.scripts.js', array( 'jquery' ), '', true );
 
+	// slick
+	wp_register_script( 'slick-js', get_stylesheet_directory_uri() . '/assets/js/lib/slick.min.js', array( 'jquery' ), '', true );
+
     // enqueue styles and scripts
+	wp_enqueue_style( 'slick-stylesheet' );
+	wp_enqueue_style( 'slick-theme-stylesheet' );
     wp_enqueue_style( 'icepick-stylesheet' );
+
+	wp_enqueue_script( 'slick-js' );
     wp_enqueue_script( 'icepick-js' );
 
   }

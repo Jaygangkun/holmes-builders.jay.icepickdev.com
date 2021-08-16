@@ -19,7 +19,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 	  	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-	    
+
+		<!-- Google Font	     -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 	    <!-- Font Awesome -->
 	    <script src="https://kit.fontawesome.com/0fa7312826.js" crossorigin="anonymous"></script>
 		
@@ -56,7 +61,16 @@
 	  <div class="container d-block">
 		<div class="row align-items-center">
 			<div class="col">
-				<a class="navbar-brand px-2" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
+				<a class="navbar-brand px-2" href="<?php echo home_url(); ?>">
+					<?php
+					$logo = get_field('header_logo', 'option');
+					if($logo) {
+						?>
+						<img class="header-logo__img" src="<?php echo $logo['url']?>" alt="<?php echo $logo['alt']?>">
+						<?php
+					}
+					?>
+				</a>
 			</div>
 			<div class="col-auto">
 
@@ -71,12 +85,83 @@
 				</div>
 			</div>
 			<div class="col-auto col-md d-none d-lg-block">
-				Nav Right
+				<div class="header-links">
+					<?php
+					$link1 = get_field('header_link1', 'option');
+					if(isset($link1)) {
+						?>
+						<a class="header-link" href="<?php echo $link1['url']?>" target="<?php echo $link1['target']?>"><?php echo $link1['title']?></a>
+						<?php
+					}
+					?>
+
+					<?php
+					$link2 = get_field('header_link2', 'option');
+					if(isset($link1)) {
+						?>
+						<a class="header-link" href="<?php echo $link2['url']?>" target="<?php echo $link2['target']?>"><?php echo $link2['title']?></a>
+						<?php
+					}
+					?>
+				</div>
+				
 			</div>
 		</div>
 
 
 	</div>
 </nav>
+<style>
+body {
+	font-family: 'Lexend', sans-serif;
+}
 
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+	font-family: 'Lexend', sans-serif;
+}
+
+.header-logo__img {
+	width: 40px;
+}
+
+.header-links {
+	text-align: right;
+}
+
+.header-link {
+	text-transform: uppercase;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+
+	color: #54565A;
+
+	text-decoration: none;
+	cursor: pointer;
+	margin: 0px 15px;
+}
+
+.header-link:last-of-type {
+	margin-right: 0px;
+}
+
+.header-link:hover {
+	color: #54565A;
+	text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 15px;
+
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+
+	color: #54565A;
+}
+</style>
     

@@ -57,25 +57,44 @@ function my_acf_init() {
 		));
 		
 		acf_register_block(array(
-			'name'				=> 'tabs-block',
-			'title'				=> __('Tabs Block'),
-			'description'		=> __('Show tabbed content'),
+			'name'				=> 'home-hero',
+			'title'				=> __('Home Hero Block'),
+			'description'		=> __('A dummy starter block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'custom',
 			'icon'				=> 'slides',
-			'keywords'			=> array( 'tabs' )
+			'keywords'			=> array( 'test' )
 		));
-		
+
 		acf_register_block(array(
-			'name'				=> 'page-tabs-block',
-			'title'				=> __('Page Tabs Block'),
-			'description'		=> __('Show pages as tabbed content'),
+			'name'				=> 'home-sites',
+			'title'				=> __('Home Sites Block'),
+			'description'		=> __('A dummy starter block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'custom',
 			'icon'				=> 'slides',
-			'keywords'			=> array( 'tabs' )
+			'keywords'			=> array( 'test' )
 		));
-		
+
+		acf_register_block(array(
+			'name'				=> 'image-description',
+			'title'				=> __('Image Description Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
+
+		acf_register_block(array(
+			'name'				=> 'gallery-show',
+			'title'				=> __('Gallery Show Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
 	}
 }
   
