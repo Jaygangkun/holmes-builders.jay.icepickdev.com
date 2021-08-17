@@ -1,3 +1,49 @@
-.header-logo__img {
-    width: 40px;
+
+.header {
+    .header-logo__img {
+        width: 40px;
+    }
+    
+    .navbar-light {
+        .nav-link {
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+        
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        
+            color: #54565A;
+        }
+    }
+
+    .header-links {
+        text-align: right;
+
+        .header-link {
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        
+            color: #54565A;
+        
+            text-decoration: none;
+            cursor: pointer;
+            margin: 0px 15px;
+
+            &:last-of-type {
+                margin-right: 0px;
+            }
+
+            &:hover {
+                color: #54565A;
+                text-decoration: none;
+            }
+            
+        }
+    }
 }

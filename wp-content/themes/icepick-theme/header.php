@@ -56,112 +56,61 @@
 	</head>
 
 	<body <?php body_class(); ?>>
-  	
-<nav class="navbar navbar-expand-lg navbar-light top-navbar <?= is_front_page() ? 'front':'' ?>">
-	  <div class="container d-block">
-		<div class="row align-items-center">
-			<div class="col">
-				<a class="navbar-brand px-2" href="<?php echo home_url(); ?>">
-					<?php
-					$logo = get_field('header_logo', 'option');
-					if($logo) {
-						?>
-						<img class="header-logo__img" src="<?php echo $logo['url']?>" alt="<?php echo $logo['alt']?>">
+  	<div class="header">
+	  <nav class="navbar navbar-expand-lg navbar-light top-navbar <?= is_front_page() ? 'front':'' ?>">
+		<div class="container d-block">
+			<div class="row align-items-center">
+				<div class="col">
+					<a class="navbar-brand px-2" href="<?php echo home_url(); ?>">
 						<?php
-					}
-					?>
-				</a>
-			</div>
-			<div class="col-auto">
+						$logo = get_field('header_logo', 'option');
+						if($logo) {
+							?>
+							<img class="header-logo__img" src="<?php echo $logo['url']?>" alt="<?php echo $logo['alt']?>">
+							<?php
+						}
+						?>
+					</a>
+				</div>
+				<div class="col-auto">
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-				<div class="collapse navbar-collapse" id="navbar-content">
+					<div class="collapse navbar-collapse" id="navbar-content">
 
-					<?php icepick_main_nav(); ?>
+						<?php icepick_main_nav(); ?>
 
+					</div>
+				</div>
+				<div class="col-auto col-md d-none d-lg-block">
+					<div class="header-links">
+						<?php
+						$link1 = get_field('header_link1', 'option');
+						if(isset($link1)) {
+							?>
+							<a class="header-link" href="<?php echo $link1['url']?>" target="<?php echo $link1['target']?>"><?php echo $link1['title']?></a>
+							<?php
+						}
+						?>
+
+						<?php
+						$link2 = get_field('header_link2', 'option');
+						if(isset($link1)) {
+							?>
+							<a class="header-link" href="<?php echo $link2['url']?>" target="<?php echo $link2['target']?>"><?php echo $link2['title']?></a>
+							<?php
+						}
+						?>
+					</div>
+					
 				</div>
 			</div>
-			<div class="col-auto col-md d-none d-lg-block">
-				<div class="header-links">
-					<?php
-					$link1 = get_field('header_link1', 'option');
-					if(isset($link1)) {
-						?>
-						<a class="header-link" href="<?php echo $link1['url']?>" target="<?php echo $link1['target']?>"><?php echo $link1['title']?></a>
-						<?php
-					}
-					?>
 
-					<?php
-					$link2 = get_field('header_link2', 'option');
-					if(isset($link1)) {
-						?>
-						<a class="header-link" href="<?php echo $link2['url']?>" target="<?php echo $link2['target']?>"><?php echo $link2['title']?></a>
-						<?php
-					}
-					?>
-				</div>
-				
-			</div>
+
 		</div>
-
-
+	</nav>
 	</div>
-</nav>
-<style>
-body {
-	font-family: 'Lexend', sans-serif;
-}
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	font-family: 'Lexend', sans-serif;
-}
-
-.header-logo__img {
-	width: 40px;
-}
-
-.header-links {
-	text-align: right;
-}
-
-.header-link {
-	text-transform: uppercase;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 15px;
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
-
-	color: #54565A;
-
-	text-decoration: none;
-	cursor: pointer;
-	margin: 0px 15px;
-}
-
-.header-link:last-of-type {
-	margin-right: 0px;
-}
-
-.header-link:hover {
-	color: #54565A;
-	text-decoration: none;
-}
-
-.navbar-light .navbar-nav .nav-link {
-	font-weight: normal;
-	font-size: 12px;
-	line-height: 15px;
-
-	letter-spacing: 0.07em;
-	text-transform: uppercase;
-
-	color: #54565A;
-}
-</style>
     
