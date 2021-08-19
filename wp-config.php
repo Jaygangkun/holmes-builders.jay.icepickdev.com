@@ -18,9 +18,9 @@
  * @package WordPress
  */
 
-define( 'WP_HOME', 'http://holmes-builders.jay.icepickdev.com' );
+define( 'WP_HOME', 'http://holmes.thinkcre8tive.com' );
 
-define( 'WP_SITEURL', 'http://holmes-builders.jay.icepickdev.com' );
+define( 'WP_SITEURL', 'http://holmes.thinkcre8tive.com' );
 
 define( 'ALLOW_UNFILTERED_UPLOADS', true);
 
