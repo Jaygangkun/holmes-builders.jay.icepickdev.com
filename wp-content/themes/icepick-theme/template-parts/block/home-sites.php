@@ -1,23 +1,5 @@
 <?php /* Block Name: Home Sites Block */ ?>
 <section class="home-sites">
-	<div class="container">
-        <div class="row d-flex align-items-center justify-content-between">
-            <div class="col-lg-9 col-md-8">
-                <h2 class="section-title-30"><?php the_field('title')?></h2>
-            </div>
-            <?php
-            $link = get_field('link');
-            if($link) {
-                ?>
-                <div class="col-lg-3 col-md-4 home-sites-link-wrap">
-                    <a class="link link-black" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']?></a>
-                </div>
-                <?php
-            }
-            ?>
-            
-        </div>
-    </div>
     <div class="home-sites-slider">
     <?php if( have_rows('list') ): while ( have_rows('list') ) : the_row(); ?>
         <div class="home-sites-slide">

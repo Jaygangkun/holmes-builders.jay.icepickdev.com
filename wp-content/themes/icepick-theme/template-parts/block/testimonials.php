@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="testimonials-nav">
-        <div class="testimonials-wrap">
+        <div class="testimonials-nav-wrap">
             <div class="testimonials-nav__line"></div>
             <div class="testimonials-nav__numb">
                 <span class="testimonials-nav__numb-current">01</span>

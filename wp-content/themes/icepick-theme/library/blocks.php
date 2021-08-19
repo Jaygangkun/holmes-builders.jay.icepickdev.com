@@ -77,48 +77,8 @@ function my_acf_init() {
 		));
 
 		acf_register_block(array(
-			'name'				=> 'image-description',
-			'title'				=> __('Image Description Block'),
-			'description'		=> __('A dummy starter block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'slides',
-			'keywords'			=> array( 'test' )
-		));
-
-		acf_register_block(array(
-			'name'				=> 'gallery-show',
-			'title'				=> __('Gallery Show Block'),
-			'description'		=> __('A dummy starter block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'slides',
-			'keywords'			=> array( 'test' )
-		));
-
-		acf_register_block(array(
-			'name'				=> 'general-hero',
-			'title'				=> __('General Hero Block'),
-			'description'		=> __('A dummy starter block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'slides',
-			'keywords'			=> array( 'test' )
-		));
-
-		acf_register_block(array(
 			'name'				=> 'navigations',
 			'title'				=> __('Navigations Block'),
-			'description'		=> __('A dummy starter block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'slides',
-			'keywords'			=> array( 'test' )
-		));
-
-		acf_register_block(array(
-			'name'				=> 'photo-text',
-			'title'				=> __('Photo Text Block'),
 			'description'		=> __('A dummy starter block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'custom',
@@ -139,16 +99,6 @@ function my_acf_init() {
 		acf_register_block(array(
 			'name'				=> 'testimonials',
 			'title'				=> __('Testimonials Block'),
-			'description'		=> __('A dummy starter block.'),
-			'render_callback'	=> 'my_acf_block_render_callback',
-			'category'			=> 'custom',
-			'icon'				=> 'slides',
-			'keywords'			=> array( 'test' )
-		));
-
-		acf_register_block(array(
-			'name'				=> 'process',
-			'title'				=> __('Process Block'),
 			'description'		=> __('A dummy starter block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'custom',
