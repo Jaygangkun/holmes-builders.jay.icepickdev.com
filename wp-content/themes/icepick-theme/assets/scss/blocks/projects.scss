@@ -1,28 +1,29 @@
-.teams {
+.projects {
     padding-top: 60px;
     background: #F2F2F2;
     
-    .section-title-28 {
+    .section-title-30 {
         color: #212121;
+        text-align: center;
     }
 
-    .team-members {
+    .project-list {
         margin-top: 60px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
 
-        .team-member-col {
-            width: calc(25% - 5px);
+        .project-list-col {
+            width: calc(50% - 5px);
             margin-bottom: 10px;
     
-            .team-member-col-wrap {
+            .project-list-col-wrap {
                 position: relative;
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
                 width: 100%;
-                padding-top: 125%;
+                padding-top: 66%;
                 height: 0px;
     
                 &::before {
@@ -35,7 +36,7 @@
                     background: linear-gradient(13.27deg, rgba(0, 0, 0, 0.56) 3.67%, rgba(0, 0, 0, 0) 56.95%), rgba(0, 0, 0, 0.3);
                 } 
     
-                .team-member-col-content {
+                .project-list-col-content {
                     position: absolute;
                     left: 25px;
                     bottom: 10px;
@@ -46,11 +47,20 @@
     
     @media screen and (max-width: 992px) {
         
-        .team-members {
+        .project-list {
             margin-top: 40px;
+        }
+    }
 
-            .team-member-col {
-                width: calc(50% - 5px);
+    @media screen and (max-width: 767px) {
+        
+        .project-list {
+            .project-list-col {
+                width: 100%;
+
+                .project-list-col-wrap {
+                    padding-top: 50%;
+                }
             }
         }
     }
