@@ -1,0 +1,52 @@
+.form-container {
+    label {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+
+        color: #212121;
+    }
+
+    input, select, textarea {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 27px;
+
+        color: #212121;
+        border: 0px;
+        background: #ffffff;
+        padding: 10px !important;
+        width: 100% !important;
+    }
+
+    input[type="submit"] {
+        width: auto !important;
+        background: #212121;
+        color: #ffffff;
+        padding: 10px 50px !important;
+    }
+}
+
+.contact-form {
+    ul {
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+            width: 100%;
+
+            &:nth-of-type(1),
+            &:nth-of-type(2),
+            &:nth-of-type(4),
+            &:nth-of-type(5) {
+                width: calc(50% - 5px);
+            }
+        }
+    }
+}

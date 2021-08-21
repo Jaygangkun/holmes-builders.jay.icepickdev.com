@@ -125,6 +125,16 @@ function my_acf_init() {
 			'icon'				=> 'slides',
 			'keywords'			=> array( 'test' )
 		));
+
+		acf_register_block(array(
+			'name'				=> 'homes',
+			'title'				=> __('Homes Block'),
+			'description'		=> __('A dummy starter block.'),
+			'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'custom',
+			'icon'				=> 'slides',
+			'keywords'			=> array( 'test' )
+		));
 	}
 }
   

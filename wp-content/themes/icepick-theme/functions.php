@@ -78,3 +78,63 @@ function icepick_group_wrapper( $block_content, $block ) {
 }
  
 add_filter( 'render_block', 'icepick_group_wrapper', 10, 2 );
+
+function getHomes() {
+	
+	if(isset($_POST['filters']) && count($_POST['filters']) > 0){
+		$filters = $_POST['filters'];
+		$tax_query = array();
+		foreach($filters as $filter){
+			$tax_query[] = array(
+				'taxonomy' => 'style',
+				'field' => 'term_id',
+				'terms' => $filter['value'],
+			);
+		}
+		$homes = get_posts(array(
+			'post_type' => 'homes',
+			'numberposts' => -1,
+			'order_by' => 'date',
+			'sort_order' => 'desc',
+			'tax_query' => $tax_query
+		));
+	}
+	else{
+		$homes = get_posts(array(
+			'post_type' => 'homes',
+			'numberposts' => -1,
+			'order_by' => 'date',
+			'sort_order' => 'desc'
+		));
+	}
+	
+
+	foreach($homes as $home){
+		$image = get_the_post_thumbnail_url($home->ID, 'full');
+		$link = get_permalink($home->ID);
+
+		?>
+		<div class="home-col">
+			<div class="home-col-wrap" style="background-image:url(<?php echo $image?>)">
+				<div class="container position-relative">
+					<div class="row d-flex align-items-center justify-content-between">
+						<div class="col-lg-6 col-md-8">
+							<div class="home__name section-title-30 mb-3"><?php echo get_the_title($home->ID)?></div>
+							<div class="home__location item-text-10"><?php the_field('location2', $home->ID)?></div>
+						</div>
+						<div class="col-lg-3 col-md-4 mt-3">
+							<div class="home__price item-text-10 mb-3"><?php the_field('home_price', $home->ID)?></div>
+							<a class="btn btn-light" href="<?php echo $link?>">View Community</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	die();
+}
+
+add_action('wp_ajax_get_homes', 'getHomes');
+add_action('wp_ajax_nopriv_get_homes', 'getHomes');

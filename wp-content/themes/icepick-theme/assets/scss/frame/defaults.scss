@@ -1,5 +1,8 @@
 body{
 	font-family: 'Lexend', sans-serif; 
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
 
 	h2{
 		font-style: normal;
