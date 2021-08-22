@@ -107,8 +107,8 @@ function my_acf_init() {
 		));
 
 		acf_register_block(array(
-			'name'				=> 'house-gallery',
-			'title'				=> __('House Gallery Block'),
+			'name'				=> 'galleries',
+			'title'				=> __('Galleries Block'),
 			'description'		=> __('A dummy starter block.'),
 			'render_callback'	=> 'my_acf_block_render_callback',
 			'category'			=> 'custom',

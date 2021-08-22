@@ -138,3 +138,61 @@ function getHomes() {
 
 add_action('wp_ajax_get_homes', 'getHomes');
 add_action('wp_ajax_nopriv_get_homes', 'getHomes');
+
+function getGalleries() {
+	
+	if(isset($_POST['filters']) && count($_POST['filters']) > 0){
+		$filters = $_POST['filters'];
+		$tax_query = array();
+		foreach($filters as $filter){
+			$tax_query[] = array(
+				'taxonomy' => 'gallery_style',
+				'field' => 'term_id',
+				'terms' => $filter['value'],
+			);
+		}
+		$galleries = get_posts(array(
+			'post_type' => 'gallery',
+			'numberposts' => -1,
+			'order_by' => 'date',
+			'sort_order' => 'desc',
+			'tax_query' => $tax_query
+		));
+	}
+	else{
+		$galleries = get_posts(array(
+			'post_type' => 'gallery',
+			'numberposts' => -1,
+			'order_by' => 'date',
+			'sort_order' => 'desc'
+		));
+	}
+	
+
+	foreach($galleries as $gallery){
+		$image = get_the_post_thumbnail_url($gallery->ID, 'full');
+		?>
+		<div class="galleries-col">
+			<div class="galleries-col-wrap" style="background-image:url(<?php echo $image?>)">
+				<div class="galleries-col-content">
+					<div class="item-text-25"><?php echo get_the_title($gallery->ID)?></div>
+					<div class="item-text-10"><?php the_field('location', $gallery->ID)?></div>
+					<?php
+					$link = get_field('link', $gallery->ID);
+					if($link) {
+						?>
+						<a class="btn btn-light mt-3" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']?></a>
+						<?php
+					}
+					?>
+				</div>
+			</div>
+		</div>
+		<?php
+	}
+
+	die();
+}
+
+add_action('wp_ajax_get_galleries', 'getGalleries');
+add_action('wp_ajax_nopriv_get_galleries', 'getGalleries');
