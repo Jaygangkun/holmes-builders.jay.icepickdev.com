@@ -31,4 +31,44 @@
             background: #212121;
         }
     }
+
+    &.sticky {
+        left: 0px;
+        top: 51px;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+    }
+
+    @media screen and (max-width: 992px) {
+        &.sticky {
+            top: 56px;
+        }
+    }
+
+    @media screen and (max-width: 782px) {
+        &.sticky {
+            top: 70px;
+        }
+    }
+}
+
+.admin-bar {
+    .navigations {
+        &.sticky {
+            top: 83px;
+        }
+
+        @media screen and (max-width: 992px) {
+            &.sticky {
+                top: 88px;
+            }
+        }
+
+        @media screen and (max-width: 782px) {
+            &.sticky {
+                top: 102px;
+            }
+        }
+    }
 }

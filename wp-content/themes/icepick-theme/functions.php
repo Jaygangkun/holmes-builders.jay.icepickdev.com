@@ -80,7 +80,6 @@ function icepick_group_wrapper( $block_content, $block ) {
 add_filter( 'render_block', 'icepick_group_wrapper', 10, 2 );
 
 function getHomes() {
-	
 	if(isset($_POST['filters']) && count($_POST['filters']) > 0){
 		$filters = $_POST['filters'];
 		$tax_query = array();

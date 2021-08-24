@@ -1,5 +1,5 @@
 .teams {
-    padding-top: 60px;
+    padding-top: 80px;
     background: #F2F2F2;
     
     .section-title-28 {
@@ -7,7 +7,7 @@
     }
 
     .team-members {
-        margin-top: 60px;
+        margin-top: 80px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -38,7 +38,12 @@
                 .team-member-col-content {
                     position: absolute;
                     left: 25px;
-                    bottom: 10px;
+                    bottom: 20px;
+
+                    .team-member-name {
+                        text-transform: initial;
+                        letter-spacing: initial;
+                    }
                 }
             }
         }

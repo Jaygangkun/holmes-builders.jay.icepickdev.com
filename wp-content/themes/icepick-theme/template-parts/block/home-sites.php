@@ -28,26 +28,3 @@
     <?php endwhile; endif; ?>
     </div>
 </section>
-<script>
-	(function($){
-		$(document).ready(function() {
-			$('.home-sites-slider').slick({
-				slidesToShow: 3,
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1
-                        }
-                    },
-                ]
-			})
-		})
-	})(jQuery)
-</script>

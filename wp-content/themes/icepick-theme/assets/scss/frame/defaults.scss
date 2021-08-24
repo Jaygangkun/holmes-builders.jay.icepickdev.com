@@ -37,7 +37,7 @@ body{
 
 	p {
 		font-style: normal;
-		font-weight: normal;
+		font-weight: 300;
 		font-size: 17px;
 		line-height: 33px;
 	}
@@ -237,6 +237,30 @@ body{
 	align-items: center;
 }
 
+.pt-50 {
+	padding-top: 50px !important;
+}
+
+.pb-50 {
+	padding-bottom: 50px !important;
+}
+
+.pt-80 {
+	padding-top: 80px !important;
+}
+
+.pb-80 {
+	padding-bottom: 80px !important;
+}
+
+
+.pt-100 {
+	padding-top: 100px !important
+}
+
+.pb-100 {
+	padding-bottom: 100px !important;
+}
 @media screen and (max-width: 768px) {
 
 	.item-text-25 {

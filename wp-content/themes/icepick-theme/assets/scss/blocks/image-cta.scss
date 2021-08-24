@@ -1,9 +1,17 @@
 .image-cta{
 	background-size: cover;
 	
+	h2 {
+		margin-bottom: 20px;
+	}
+
 	p{
 		font-size: 17px;
 		line-height: 33px;
-		font-weight: 400;
+		font-weight: 300;
+	}
+
+	.wp-block-buttons {
+		margin-top: 30px;
 	}
 }

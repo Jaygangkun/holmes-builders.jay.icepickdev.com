@@ -1,5 +1,12 @@
 
 .header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1;
+
     .header-logo__img {
         width: 40px;
     }
@@ -45,6 +52,18 @@
                 text-decoration: none;
             }
             
+        }
+    }
+}
+
+.admin-bar {
+    .header {
+        top: 32px;
+    }
+
+    @media screen and (max-width: 782px) {
+        .header {
+            top: 46px;
         }
     }
 }

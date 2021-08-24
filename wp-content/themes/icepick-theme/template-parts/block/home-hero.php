@@ -28,22 +28,3 @@
 		</div>
 	</div>
 </section>
-<script>
-	(function($){
-		$(document).ready(function() {
-			$('.home-hero-slider').slick({
-				dots: false,
-				infinite: true,
-				arrows: false,
-				speed: 300,
-				slidesToShow: 1,
-				adaptiveHeight: true,
-				autoplay: true,
-  				autoplaySpeed: 2000,
-			}).on('afterChange', function(event, slick, currentSlide) {
-				var cur_slide = currentSlide + 1;
-				$('.home-hero-nav__numb-current').text(('0' + cur_slide).slice(-2));
-			});
-		})
-	})(jQuery)
-</script>
