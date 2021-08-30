@@ -4,6 +4,7 @@ body{
 	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizelegibility;
 
+	background: #FBFCFF;
 	h2{
 		font-style: normal;
 		font-weight: 400;
@@ -74,6 +75,12 @@ body{
 	
 }
 
+.btn-primary {
+	&:hover {
+		background-color: #000000;
+		border-color: #000000;
+	}
+}
 .item-text-10 {
 	font-style: normal;
 	font-weight: 600;
@@ -156,10 +163,6 @@ body{
 	text-align: center;
 
 	color: #FFFFFF;
-	position: absolute;
-	bottom: 80px;
-	left: 50%;
-	transform: translateX(-50%);
 }
 
 .link {
@@ -278,7 +281,7 @@ body{
 	}
 
 	.item-title-28 {
-		font-size: 24px;
+		font-size: 22px;
 	}
 
 	.section-title-30 {

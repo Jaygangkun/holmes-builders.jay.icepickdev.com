@@ -11,7 +11,7 @@
         <div class="container">
             <div class="filter-wrap">
                 <div class="filter-select-wrap">
-                    <span class="filter-title">Filter</span>
+                    <span class="filter-title">Filter:</span>
                     <?php
                     $styles = get_terms( array(
                         'taxonomy' => 'gallery_style',
@@ -19,7 +19,7 @@
                     ) );
                     ?>
                     <select id="style_select" class="filter-select">
-                        <option value="">None</option>
+                        <option value="">STYLE:</option>
                         <?php
                         foreach( $styles as $style ) {
                             ?>

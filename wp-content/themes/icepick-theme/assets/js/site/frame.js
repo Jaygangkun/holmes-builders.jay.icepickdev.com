@@ -30,7 +30,7 @@ $(document).ready(function($) {
 			slidesToShow: 1,
 			adaptiveHeight: true,
 			autoplay: true,
-			  autoplaySpeed: 2000,
+			autoplaySpeed: 6000,
 		}).on('afterChange', function(event, slick, currentSlide) {
 			var cur_slide = currentSlide + 1;
 			$('.home-hero-nav__numb-current').text(('0' + cur_slide).slice(-2));
@@ -65,15 +65,34 @@ $(document).ready(function($) {
 		let target = $(this).attr('href');
 
 		console.log('target:', target);
-		$('html').animate({
-			scrollTop: $(target).offset().top - $('.header').outerHeight()
-		}, 1000);
+		let scrollTop = $(target).offset().top;
+		if($('.header').length > 0){
+			scrollTop -= $('.header').outerHeight();
+		}
+
+		if($(window).width() > 782) {
+			if($('.navigations').length > 0){
+				scrollTop -= $('.navigations').outerHeight();
+			}	
+		}
+
+		if($('#wpadminbar').length > 0){
+			scrollTop -= $('#wpadminbar').outerHeight();
+		}
+
+		$('html, body').animate({
+			scrollTop: scrollTop
+		}, 100, 'linear');
 	})
 
 	var navigations_dom_offset = 0;
 
 	if($('.navigations').length > 0 && !$('.navigations').hasClass('sticky')) {
 		navigations_dom_offset = $('.navigations').offset().top;
+
+		if($('.header').length > 0) {
+			navigations_dom_offset -= $('.header').outerHeight();
+		}
 	}
 
 	function processScrollSubNavigation(){

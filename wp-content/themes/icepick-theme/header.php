@@ -62,32 +62,53 @@
   	<div class="header">
 	  <nav class="navbar navbar-expand-lg navbar-light top-navbar <?= is_front_page() ? 'front':'' ?>">
 		<div class="container d-block">
-			<div class="row align-items-center">
-				<div class="col">
-					<a class="navbar-brand px-2" href="<?php echo home_url(); ?>">
-						<?php
-						$logo = get_field('header_logo', 'option');
-						if($logo) {
-							?>
-							<img class="header-logo__img" src="<?php echo $logo['url']?>" alt="<?php echo $logo['alt']?>">
-							<?php
-						}
+			<div class="nav-header-wrap">
+				<a class="navbar-brand px-2" href="<?php echo home_url(); ?>">
+					<?php
+					$logo = get_field('header_logo', 'option');
+					if($logo) {
 						?>
-					</a>
-				</div>
-				<div class="col-auto">
+						<img class="header-logo__img" src="<?php echo $logo['url']?>" alt="<?php echo $logo['alt']?>">
+						<?php
+					}
+					?>
+				</a>
 
-					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="<?php esc_html_e( 'Toggle Navigation', 'theme-textdomain' ); ?>">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-					<div class="collapse navbar-collapse" id="navbar-content">
+				<div class="collapse navbar-collapse" id="navbar-content">
 
-						<?php icepick_main_nav(); ?>
+					<?php icepick_main_nav(); ?>
 
+					<div class="d-lg-none d-block">
+						<div class="header-links">
+							<?php
+							$link1 = get_field('header_link1', 'option');
+							if(isset($link1)) {
+								?>
+								<div class="header-link-wrap">
+									<a class="header-link" href="<?php echo $link1['url']?>" target="<?php echo $link1['target']?>"><?php echo $link1['title']?></a>
+								</div>
+								<?php
+							}
+							?>
+
+							<?php
+							$link2 = get_field('header_link2', 'option');
+							if(isset($link1)) {
+								?>
+								<div class="header-link-wrap">
+									<a class="header-link" href="<?php echo $link2['url']?>" target="<?php echo $link2['target']?>"><?php echo $link2['title']?></a>
+								</div>
+								<?php
+							}
+							?>
+						</div>
 					</div>
 				</div>
-				<div class="col-auto col-md d-none d-lg-block">
+				<div class="d-none d-lg-block">
 					<div class="header-links">
 						<?php
 						$link1 = get_field('header_link1', 'option');

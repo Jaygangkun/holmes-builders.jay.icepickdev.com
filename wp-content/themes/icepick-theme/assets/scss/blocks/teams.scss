@@ -59,4 +59,13 @@
             }
         }
     }
+
+    @media screen and (max-width: 576px) {
+        
+        .team-members {
+            .team-member-col {
+                width: 100%;
+            }
+        }
+    }
 }

@@ -58,10 +58,17 @@
     
                     .home-sites-slide__link {
                         margin-top: 10px;
+                        display: none;
                     }
 
                     .home-sites-slide__name {
                         margin-bottom: 10px;
+                    }
+                }
+
+                &:hover {
+                    .home-sites-slide__link {
+                        display: inline-block;
                     }
                 }
             }

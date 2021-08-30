@@ -1,36 +1,44 @@
 .navigations {
     background: #F2F2F2;
 
-    .navigation-link {
-        display: inline-block;
-        cursor: pointer;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 15px;
-    
-        text-align: center;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-    
-        color: #212121;
-        position: relative;
-        padding: 15px 10px;
+    .navigations-wrap {
+        display: flex;
+        flex-wrap: wrap;
 
-        &:first-of-type {
-            padding-left: 0px;
-        }
-        
-        &.active::after {
-            content: '';
-            position: absolute;
-            left: 0px;
-            width: 100%;
-            bottom: 0px;
-            height: 1px;
-            background: #212121;
+        .navigation-link-wrap {
+            .navigation-link {
+                display: inline-block;
+                cursor: pointer;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+            
+                text-align: center;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
+            
+                color: #212121;
+                white-space: nowrap;
+
+                padding: 15px 10px;
+                position: relative;
+
+                &.active::after {
+                    content: '';
+                    position: absolute;
+                    left: 0px;
+                    width: 100%;
+                    bottom: 0px;
+                    height: 1px;
+                    background: #212121;
+                }     
+            }
+
+                   
         }
     }
+    
 
     &.sticky {
         left: 0px;
@@ -49,6 +57,22 @@
     @media screen and (max-width: 782px) {
         &.sticky {
             top: 70px;
+        }
+
+        & {
+            position: static !important;
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .navigations-wrap {
+            display: block;
+    
+            .navigation-link-wrap {
+                .navigation-link {
+                    padding: 10px 0px;
+                }
+            }
         }
     }
 }

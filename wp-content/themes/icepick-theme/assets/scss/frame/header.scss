@@ -4,54 +4,69 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    background: #ffffff;
+    background: #FBFCFF;
     z-index: 1;
 
-    .header-logo__img {
-        width: 40px;
-    }
-    
-    .navbar-light {
-        .nav-link {
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 15px;
-        
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
-        
-            color: #54565A;
-            padding: 0px 15px;
+    .nav-header-wrap {
+        display: flex;
+        align-items: center;
+        position: relative;
+        justify-content: space-between;
+
+        .header-logo__img {
+            width: 40px;
         }
-    }
-
-    .header-links {
-        text-align: right;
-
-        .header-link {
-            text-transform: uppercase;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 15px;
-            letter-spacing: 0.07em;
-            text-transform: uppercase;
         
-            color: #54565A;
-        
-            text-decoration: none;
-            cursor: pointer;
-            margin: 0px 15px;
-
-            &:last-of-type {
-                margin-right: 0px;
+        #navbar-content {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            .navbar-nav {
+                .nav-link {
+                    font-weight: normal;
+                    font-size: 12px;
+                    line-height: 15px;
+                
+                    letter-spacing: 0.07em;
+                    text-transform: uppercase;
+                
+                    color: #54565A;
+                    padding: 0px 15px;
+                }
             }
-
-            &:hover {
-                color: #54565A;
-                text-decoration: none;
-            }
+        }
+    
+        .header-links {
+            text-align: right;
+            font-size: 0px;
+    
+            .header-link {
+                text-transform: uppercase;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 0.07em;
+                text-transform: uppercase;
             
+                color: #54565A;
+            
+                text-decoration: none;
+                cursor: pointer;
+                margin: 0px 15px;
+
+                display: inline-block;
+    
+                &:last-of-type {
+                    margin-right: 0px;
+                }
+    
+                &:hover {
+                    color: #54565A;
+                    text-decoration: none;
+                }
+                
+            }
         }
     }
 }
@@ -59,6 +74,36 @@
 .admin-bar {
     .header {
         top: 32px;
+    }
+
+    @media screen and (max-width: 992px) {
+        .nav-header-wrap {
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            #navbar-content {
+                width: 100%;
+                position: static;
+                transform: initial;
+
+                .navbar-nav {
+                    .nav-link {
+                        padding: 10px 15px;
+                        text-align: center;
+                    }
+                }
+
+                .header-links {
+                    .header-link-wrap {
+                        text-align: center;
+
+                        .header-link {
+                            margin: 10px 0px;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @media screen and (max-width: 782px) {

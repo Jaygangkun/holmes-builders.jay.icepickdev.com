@@ -102,7 +102,7 @@ $feature_img = get_the_post_thumbnail_url($podcast_id, 'full');
                     ?>
 
                 </div>
-                <div class="col-lg-6 ps-lg-5 pt-sm-5">
+                <div class="col-lg-6 ps-lg-5 pt-5">
                     <h3 class="">Community Info</h3>
                     <p class=""><?php the_field('community_description', $id)?></p>
                 </div>
@@ -121,11 +121,11 @@ $feature_img = get_the_post_thumbnail_url($podcast_id, 'full');
                     $img_url = $img['url'];
                 }
                 ?>
-                <div class="col-lg-4 col-md-6 single-homes-gallery-col">
+                <a class="col-lg-4 col-md-6 single-homes-gallery-col" href="<?php echo $img_url?>" rel="gallery">
                     <div class="single-homes-gallery-col-wrap" style="background-image:url(<?php echo $img_url?>)">
 
                     </div>
-                </div>
+            </a>
                 <?php endwhile; endif; ?>
             </div>
         </div>
@@ -148,4 +148,17 @@ $feature_img = get_the_post_thumbnail_url($podcast_id, 'full');
         </div>
     </section>
 </div>
+
 <?php get_footer(); ?>
+<script>
+    jQuery(document).ready(function(){
+        jQuery(".single-homes-gallery-col").fancybox({
+		'transitionIn'		: 'none',
+		'transitionOut'		: 'none',
+		// 'titlePosition' 	: 'over',
+		// 'titleFormat'       : function(title, currentArray, currentIndex, currentOpts) {
+		//     return '<span id="fancybox-title-over">Image ' +  (currentIndex + 1) + ' / ' + currentArray.length + ' ' + title + '</span>';
+		// }
+	});
+    })
+</script>

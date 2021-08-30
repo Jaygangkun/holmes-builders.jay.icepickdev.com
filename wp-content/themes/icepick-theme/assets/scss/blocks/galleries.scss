@@ -28,23 +28,40 @@
         
                 .galleries-col-content {
                     position: relative;
+
+                    .btn {
+                        visibility: hidden;
+                    }
+                }
+
+                &:hover {
+                    .galleries-col-content {
+                        .btn {
+                            visibility: visible;
+                        }
+                    }   
                 }
             }
         }
     }
 
     @media screen and (max-width: 992px) {
-        .galleries-col-wrap {
-            padding-top: 300px;
+        .galleries-list {
+            .galleries-col {
+                .galleries-col-wrap {
+                    padding-top: 300px;
+                }
+            }
         }
     }
 
     @media screen and (max-width: 576px) {
-        .galleries-col {
-            width: 100%;
-
-            .galleries-col-wrap {
-                padding-top: 200px;
+        .galleries-list {
+            .galleries-col {
+                width: 100%;
+                .galleries-col-wrap {
+                    padding-top: 200px;
+                }
             }
         }
     }
