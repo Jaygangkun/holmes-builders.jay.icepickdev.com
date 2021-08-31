@@ -150,15 +150,3 @@ $feature_img = get_the_post_thumbnail_url($podcast_id, 'full');
 </div>
 
 <?php get_footer(); ?>
-<script>
-    jQuery(document).ready(function(){
-        jQuery(".single-homes-gallery-col").fancybox({
-		'transitionIn'		: 'none',
-		'transitionOut'		: 'none',
-		// 'titlePosition' 	: 'over',
-		// 'titleFormat'       : function(title, currentArray, currentIndex, currentOpts) {
-		//     return '<span id="fancybox-title-over">Image ' +  (currentIndex + 1) + ' / ' + currentArray.length + ' ' + title + '</span>';
-		// }
-	});
-    })
-</script>

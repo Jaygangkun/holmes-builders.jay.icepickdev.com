@@ -93,6 +93,12 @@ $(document).ready(function($) {
 		if($('.header').length > 0) {
 			navigations_dom_offset -= $('.header').outerHeight();
 		}
+
+		if($('#wpadminbar').length > 0) {
+			navigations_dom_offset -= $('#wpadminbar').outerHeight();
+		}
+
+		navigations_dom_offset += 15;
 	}
 
 	function processScrollSubNavigation(){
@@ -104,10 +110,12 @@ $(document).ready(function($) {
 		var scroll = $(window).scrollTop();
 
 		if (scroll >= navigations_dom_offset){
-			navigations.addClass('sticky');
+			$('body').addClass('sticky');
+			$('body').css('padding-top', $(navigations).outerHeight() + 'px');
 		} 
 		else {
-			navigations.removeClass('sticky');
+			$('body').removeClass('sticky');
+			$('body').css('padding-top', 'initial');
 		}
 	}
 
@@ -232,6 +240,18 @@ $(document).ready(function($) {
 				drawFilters();
 			}
 		})
+	}
+
+	// single homes page
+	if($('.single-homes').length > 0){
+		Fancybox.bind(".single-homes-gallery-col", {
+            groupAll : true, // Group all items
+            on : {
+                ready : (fancybox) => {
+                    console.log(`fancybox #${fancybox.id} is ready!`);
+                }
+            }
+        });
 	}
 	
 }); /* end of as page load scripts */

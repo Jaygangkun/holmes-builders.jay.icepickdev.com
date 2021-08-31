@@ -18,7 +18,9 @@
                     $link = get_sub_field('link');
                     if($link) {
                         ?>
-                        <a class="link link-black home-sites-slide__link" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']?></a>
+                        <div class="home-sites-slide-link-wrap">
+                            <a class="btn btn-primary home-sites-slide__link" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']?></a>
+                        </div>
                         <?php
                     }
                     ?>

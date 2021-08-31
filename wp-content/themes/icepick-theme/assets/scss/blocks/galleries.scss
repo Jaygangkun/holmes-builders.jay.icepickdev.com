@@ -13,8 +13,8 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-position: center;
-                padding: 30px;
-                padding-top: 400px;
+                height: 0px;
+                padding-top: 80%;
         
                 &::before {
                     content: '';
@@ -27,17 +27,31 @@
                 }
         
                 .galleries-col-content {
-                    position: relative;
+                    position: absolute;
+                    left: 30px;
+                    bottom: 30px;
+                    -webkit-transition: all 0.2s ease;/* Safari 3.2+, Chrome */
+                    -moz-transition: all 0.2s ease;/* Firefox 4-15 */
+                    -o-transition: all 0.2s ease;/* Opera 10.5-12.00 */
+                    transition: all 0.2s ease;/* Firefox 16+, Opera 12.50+ */
 
                     .btn {
-                        visibility: hidden;
+                        position: absolute;
+                        left: 0px;
+                        bottom: 0px;
+                        opacity: 0;
+                        -webkit-transition: all 0.2s ease;/* Safari 3.2+, Chrome */
+                        -moz-transition: all 0.2s ease;/* Firefox 4-15 */
+                        -o-transition: all 0.2s ease;/* Opera 10.5-12.00 */
+                        transition: all 0.2s ease;/* Firefox 16+, Opera 12.50+ */
                     }
                 }
 
                 &:hover {
                     .galleries-col-content {
+                        padding-bottom: 56px;
                         .btn {
-                            visibility: visible;
+                            opacity: 1;
                         }
                     }   
                 }
@@ -49,7 +63,7 @@
         .galleries-list {
             .galleries-col {
                 .galleries-col-wrap {
-                    padding-top: 300px;
+                    padding-top: 60%;
                 }
             }
         }
@@ -60,7 +74,7 @@
             .galleries-col {
                 width: 100%;
                 .galleries-col-wrap {
-                    padding-top: 200px;
+                    padding-top: 60%;
                 }
             }
         }

@@ -55,10 +55,20 @@
                     left: 30px;
                     right: 30px;
                     bottom: 30px;
-    
-                    .home-sites-slide__link {
+                    -webkit-transition: all 0.2s ease;/* Safari 3.2+, Chrome */
+                    -moz-transition: all 0.2s ease;/* Firefox 4-15 */
+                    -o-transition: all 0.2s ease;/* Opera 10.5-12.00 */
+                    transition: all 0.2s ease;/* Firefox 16+, Opera 12.50+ */
+                    
+                    .home-sites-slide-link-wrap {
+                        position: absolute;
+                        height: 0px;
+                        opacity: 0;
+                        -webkit-transition: all 0.2s ease;/* Safari 3.2+, Chrome */
+                        -moz-transition: all 0.2s ease;/* Firefox 4-15 */
+                        -o-transition: all 0.2s ease;/* Opera 10.5-12.00 */
+                        transition: all 0.2s ease;/* Firefox 16+, Opera 12.50+ */
                         margin-top: 10px;
-                        display: none;
                     }
 
                     .home-sites-slide__name {
@@ -67,8 +77,11 @@
                 }
 
                 &:hover {
-                    .home-sites-slide__link {
-                        display: inline-block;
+                    .home-sites-slide-info{
+                        padding-bottom: 55px;
+                        .home-sites-slide-link-wrap {
+                            opacity: 1;
+                        }
                     }
                 }
             }
