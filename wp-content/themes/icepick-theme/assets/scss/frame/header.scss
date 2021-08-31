@@ -69,12 +69,6 @@
             }
         }
     }
-}
-
-.admin-bar {
-    .header {
-        top: 32px;
-    }
 
     @media screen and (max-width: 992px) {
         .nav-header-wrap {
@@ -104,6 +98,12 @@
                 }
             }
         }
+    }
+}
+
+.admin-bar {
+    .header {
+        top: 32px;
     }
 
     @media screen and (max-width: 782px) {
