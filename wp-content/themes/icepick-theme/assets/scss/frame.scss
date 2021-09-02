@@ -1,11 +1,9 @@
 @import 'frame/colors.scss';
-
 @import 'bootstrap/bootstrap.scss';
 @import '../../node_modules/aos/src/sass/aos.scss';
 @import 'frame/wp-reset.scss';
 @import 'frame/defaults.scss';
 //@import 'frame/defaults-responsive.scss';
-
 @import 'frame/header.scss';
 @import 'frame/footer.scss';
 
@@ -25,3 +23,4 @@
 @import 'blocks/galleries.scss';
 
 @import 'pages/single-homes.scss';
+@import 'pages/single-gallery.scss';

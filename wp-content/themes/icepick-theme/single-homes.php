@@ -3,7 +3,7 @@
 <?php
 $id = get_the_ID();
 
-$feature_img = get_the_post_thumbnail_url($podcast_id, 'full');
+$feature_img = get_the_post_thumbnail_url($id, 'full');
 ?>
 
 <div class="single-homes">

@@ -253,5 +253,17 @@ $(document).ready(function($) {
             }
         });
 	}
+
+	// single gallery page
+	if($('.single-gallery-list').length > 0){
+		Fancybox.bind(".single-gallery-list-col", {
+            groupAll : true, // Group all items
+            on : {
+                ready : (fancybox) => {
+                    console.log(`fancybox #${fancybox.id} is ready!`);
+                }
+            }
+        });
+	}
 	
 }); /* end of as page load scripts */

@@ -52,13 +52,9 @@
                         <div class="item-text-25"><?php echo get_the_title($gallery->ID)?></div>
                         <div class="item-text-10"><?php the_field('location', $gallery->ID)?></div>
                         <?php
-                        $link = get_field('link', $gallery->ID);
-                        if($link) {
-                            ?>
-                            <a class="btn btn-light mt-3" href="<?php echo $link['url']?>" target="<?php echo $link['target']?>"><?php echo $link['title']?></a>
-                            <?php
-                        }
+                        $link = get_permalink($gallery->ID);
                         ?>
+                        <a class="btn btn-light mt-3" href="<?php echo $link?>">View More</a>
                     </div>
                 </div>
             </div>

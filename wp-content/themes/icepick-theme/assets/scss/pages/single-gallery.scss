@@ -1,0 +1,40 @@
+.single-gallery {
+    .single-gallery-hero {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        color: #ffffff;
+
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            background: linear-gradient(75.94deg, rgba(26, 26, 26, 0.95) 6.32%, rgba(34, 34, 34, 0) 55.08%);
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .single-gallery-list {
+        color: #212121;
+
+        .single-gallery-list-col {
+            position: relative;
+            margin-bottom: 24px;
+            cursor: pointer;
+
+            .single-gallery-list-col-wrap {
+                width: 100%;
+                height: 0px;
+                padding-top: 113%;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+}
